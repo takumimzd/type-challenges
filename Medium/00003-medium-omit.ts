@@ -1,6 +1,6 @@
-type MyOmit<T, P> = {
-  [key in keyof T as key extends P ? never : key]: T[key] 
-} 
+type MyOmit<T, U> = {
+  [key in keyof T as key extends U ? never : key]: T[key]
+}
 
 interface Todo {
   title: string
